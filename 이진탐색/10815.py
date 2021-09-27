@@ -17,6 +17,8 @@ result = []
 for i in range(len(M_card)):
     start = 0
     end = len(N_card) - 1
+
+    #무조건 0을 넣어주기
     result.append(0)    
     while start <= end:
         #중간 값을 중심으로 탐색하기
