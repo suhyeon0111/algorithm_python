@@ -36,6 +36,6 @@ for i in range(len(M_card)):
         elif N_card[mid] < M_card[i]:
             start = mid + 1 #start 위치 바꿔주기
 
-
+#list출력 시 괄호, 쉼표 없이 출력
 cardresult = " ".join(map(str, result))
 print(cardresult)
