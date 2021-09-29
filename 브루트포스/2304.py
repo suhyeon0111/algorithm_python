@@ -44,8 +44,6 @@ for i in range(1, len(Pillar)):
             max_height = min_height 
             min_height = h
 
-        
-
-
+#넓이 출력
 print(Area)
 
