@@ -17,6 +17,8 @@ result = []
 for i in range(len(M_card)):
     start = 0
     end = len(N_card) - 1
+
+    #무조건 0을 넣어주기
     result.append(0)    
     while start <= end:
         #중간 값을 중심으로 탐색하기
@@ -36,6 +38,6 @@ for i in range(len(M_card)):
         elif N_card[mid] < M_card[i]:
             start = mid + 1 #start 위치 바꿔주기
 
-
+#list출력 시 괄호, 쉼표 없이 출력
 cardresult = " ".join(map(str, result))
 print(cardresult)
