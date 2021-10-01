@@ -12,7 +12,7 @@ for i in range(N):
 
 
 #0번째 인덱스에 대해서만 오름차순 정렬
-Pillar.sort( key=lambda x: x[0])
+Pillar.sort(key=lambda x: x[0])
 
 #가장 높은 기둥 찾기
 high_H = Pillar[0][1] 
@@ -28,7 +28,7 @@ min_L = Pillar[0][0]
 Area = Pillar[high_H_index][1]
 
 for i in range(high_H_index + 1):     
-    if height < Pillar[i][1]:
+    if height <= Pillar[i][1]:
         Area_L = Pillar[i][0] - min_L
         Area += (height * Area_L)
         height = Pillar[i][1]
@@ -39,7 +39,7 @@ height_R = Pillar[-1][1]
 max_L = Pillar[-1][0]
 
 for i in range(len(Pillar)-1, high_H_index - 1, -1):
-    if height_R < Pillar[i][1]:
+    if height_R <= Pillar[i][1]:
         Area_L = max_L - Pillar[i][0]
         Area += (height_R * Area_L)
         height_R = Pillar[i][1]
