@@ -19,25 +19,24 @@
 
 import sys
 
-N, M = map(int, sys.stdin.readline().split())  
+N, M = map(int, input().split())  
 expenditure = [int(sys.stdin.readline()) for _ in range(N)] 
 
-start, end = max(expenditure), sum(expenditure)
-cnt = 0 #인출 횟수
-K = max(expenditure) #최소 금액 K
-
+start, end = max(expenditure), sum(expenditure) 
+K = sum(expenditure) 
 
 while start <= end:
-    mid = start + end // 2
-    cnt += 1 
+    mid = (start + end) // 2
+    cnt = 1 #인출 횟수
     money = mid
     for i in expenditure:
         if i <= money: #현재 가지고 있는 돈이 그 날 써야하는 돈보다 많다면
             money -= i  #현재 가지고 있는 돈에서 그 날 써야하는 돈을 빼주기
         else:
             #현재 가지고 있는 돈으로 그 날 부족하다면
-            money = mid # 인출
             cnt += 1 #인출횟수 증가
+            money = mid # 인출
+            money -= i #현재 가지고 있는 돈에서 그 날 써야하는 돈을 빼주기
     
     if cnt > M: #인출 횟수가 M보다 많다면
         start = mid + 1 #돈이 부족했다고 판단하여 인출 금액증가
