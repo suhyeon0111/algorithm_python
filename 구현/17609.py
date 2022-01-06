@@ -18,7 +18,6 @@ def palindrome(word, left, right):
     return 1
 
 def judge_palindrome(word, left, right):
-    cnt = 0  # 유사회문 구별해줄 변수
     # 회문 검사
     while left < right:
         if word[left] == word[right]:
