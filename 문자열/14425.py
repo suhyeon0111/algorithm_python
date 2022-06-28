@@ -12,3 +12,10 @@ for _ in range(m):
     if word in s:
         cnt += 1
 print(cnt)
+<<<<<<< HEAD
+=======
+
+
+# result = s & s2
+# print(len(result))
+>>>>>>> e0d29acb4c8d02a320b674cf698df3f6e04007bf
