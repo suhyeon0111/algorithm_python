@@ -4,7 +4,7 @@ K = int(input())
 stack = []
 
 for i in range(K):
-    num = int(input())  
+    num = int(input())
     if num == 0:
         stack.pop()
 
@@ -13,4 +13,3 @@ for i in range(K):
 
 result = sum(stack)
 print(result)
-
